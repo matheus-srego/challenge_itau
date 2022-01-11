@@ -4,6 +4,13 @@ import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorBlankSpac
 import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorDigitServiceImpl;
 import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorLowercaseLetterServiceImpl;
 import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorNumberOfCharactersServiceImpl;
+import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedDigitInSequenceServiceImpl;
+import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedDigitWithinTheSetServiceImpl;
+import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedLowercaseLetterInSequenceServiceImpl;
+import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedLowercaseLetterWithinTheSetServiceImpl;
+import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedSpecialCharacterInSequenceServiceImpl;
+import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedUppercaseLetterInSequenceServiceImpl;
+import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedUppercaseLetterWithinTheSetServiecImpl;
 import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorSpecialCharacterServiceImpl;
 import com.challange.itidigital.fieldsvalidation.servicesimpl.ValidatorUppercaseLetterServiceImpl;
 
@@ -26,20 +33,33 @@ public class ValidatorFactory {
 			case "hasSpecialCharacter":
 				return new ValidatorSpecialCharacterServiceImpl();
 				
-//			case "hasRepeatedLowercaseLetter":
-//				return new ValidatorRepeatedLowercaseLetterServiceImpl();
+			case "hasRepeatedLowercaseLetterInSequence":
+				return new ValidatorRepeatedLowercaseLetterInSequenceServiceImpl();
 				
-//			case "hasRepeatedUppercaseLetter":
-//				return new ValidatorRepeatedUppercaseLetterServiceImpl();
+			case "hasRepeatedUppercaseLetterInSequence":
+				return new ValidatorRepeatedUppercaseLetterInSequenceServiceImpl();
 				
-//			case "hasRepeatedSpecialCharacter":
-//				return new ValidatorRepeatedSpecialCharacterServiceImpl();
+			case "hasRepeatedSpecialCharacterInSequence":
+				return new ValidatorRepeatedSpecialCharacterInSequenceServiceImpl();
+				
+			case "hasRepeatedDigitInSequence":
+				return new ValidatorRepeatedDigitInSequenceServiceImpl();
+				
+			case "hasRepeatedLowercaseLetterWithinTheSet":
+				return new ValidatorRepeatedLowercaseLetterWithinTheSetServiceImpl();
+				
+			case "hasRepeatedUppercaseLetterWithinTheSet":
+				return new ValidatorRepeatedUppercaseLetterWithinTheSetServiecImpl();
+				
+			case "hasRepeatedDigitWithinTheSet":
+				return new ValidatorRepeatedDigitWithinTheSetServiceImpl();
 				
 			case "noExistBlankSpace":
 				return new ValidatorBlankSpaceServiceImpl();
 				
 			default: 
-				return null;
+				final String messageError = new String( "Não foi possível validar o campo com o método solicitado. Método não encontrado: " + name );
+				throw new IllegalArgumentException( messageError );
 		}
 	}
 
