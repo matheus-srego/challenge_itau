@@ -1,4 +1,4 @@
-package com.challange.itidigital.fieldsvalidation;
+package com.challenge.itidigital.fieldsvalidation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

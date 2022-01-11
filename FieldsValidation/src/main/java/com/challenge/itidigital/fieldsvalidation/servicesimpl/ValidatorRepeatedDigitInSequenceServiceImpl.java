@@ -1,9 +1,9 @@
-package com.challange.itidigital.fieldsvalidation.servicesimpl;
+package com.challenge.itidigital.fieldsvalidation.servicesimpl;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.challange.itidigital.fieldsvalidation.services.ValidatorService;
+import com.challenge.itidigital.fieldsvalidation.services.ValidatorService;
 
 public class ValidatorRepeatedDigitInSequenceServiceImpl implements ValidatorService {
 	

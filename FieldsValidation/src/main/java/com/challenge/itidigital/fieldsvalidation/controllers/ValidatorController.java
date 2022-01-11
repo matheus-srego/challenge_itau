@@ -1,4 +1,4 @@
-package com.challange.itidigital.fieldsvalidation.controllers;
+package com.challenge.itidigital.fieldsvalidation.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.challange.itidigital.fieldsvalidation.services.ValidatorFieldService;
+import com.challenge.itidigital.fieldsvalidation.services.ValidatorFieldService;
 
 @RestController
 @RequestMapping( value = "/validate" )

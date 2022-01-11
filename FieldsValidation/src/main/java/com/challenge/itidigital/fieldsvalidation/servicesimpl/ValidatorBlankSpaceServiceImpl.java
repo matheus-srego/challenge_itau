@@ -1,6 +1,6 @@
-package com.challange.itidigital.fieldsvalidation.servicesimpl;
+package com.challenge.itidigital.fieldsvalidation.servicesimpl;
 
-import com.challange.itidigital.fieldsvalidation.services.ValidatorService;
+import com.challenge.itidigital.fieldsvalidation.services.ValidatorService;
 
 public class ValidatorBlankSpaceServiceImpl implements ValidatorService {
 	

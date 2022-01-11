@@ -1,4 +1,4 @@
-package com.challange.itidigital.fieldsvalidation.services;
+package com.challenge.itidigital.fieldsvalidation.services;
 
 public interface ValidatorService {
 	
