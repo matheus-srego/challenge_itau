@@ -9,9 +9,9 @@ public class ValidatorRepeatedUppercaseLetterInSequenceServiceImpl implements Va
 	
 	@Override
 	public Boolean validate( String field ) {
-		final Pattern pattern = Pattern.compile( "([A-Z])\1{1,}" );
+		final Pattern pattern = Pattern.compile( "([A-Z])(\\1){1,}" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean hasRepeatedUppercaseLetters = matcher.matches();
+		final Boolean hasRepeatedUppercaseLetters = matcher.find();
 		
 		return !hasRepeatedUppercaseLetters;
 	}

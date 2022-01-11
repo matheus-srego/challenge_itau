@@ -9,9 +9,9 @@ public class ValidatorRepeatedLowercaseLetterInSequenceServiceImpl implements Va
 	
 	@Override
 	public Boolean validate( String field ) {
-		final Pattern pattern = Pattern.compile( "([a-z])\1{1,}" );
+		final Pattern pattern = Pattern.compile( "([a-z])(\\1){1,}" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean hasRepeatedLowercaseLetters = matcher.matches();
+		final Boolean hasRepeatedLowercaseLetters = matcher.find();
 		
 		return !hasRepeatedLowercaseLetters;
 	}
