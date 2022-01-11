@@ -48,10 +48,12 @@ Output: Um boolean indicando se a senha é válida.
 
 Embora nossas aplicações sejam escritas em Kotlin e C# (.net core), você não precisa escrever sua solução usando elas. Use a linguagem de programação que considera ter mais conhecimento.
 
-## Técnicas e Tecnologias usadas no projeto
+## Técnicas, softwares e tecnologias usadas no projeto
 
  - ```Java 11```
  - ```Eclipse IDE```
+ - ```Docker```
+ - ```Postman```
  - ```Maven```
  - ```Spring Boot```
  - ```JUnit```
