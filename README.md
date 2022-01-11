@@ -1,24 +1,16 @@
 # Back-end Challenge (iti - Itaú)
 
-## Indice
- - [Descrição]()
- - [Problema]()
- - [Como Executar o projeto]()
-    - [Ferramentas necessário na sua maquina]()
-    - [Comandos para executar o projeto]()
- - [Detahes da solução]()
- - [Assumindo premissas]()
+ - [Repositório do desafio: itidigital/backend-challenge](https://github.com/itidigital/backend-challenge)
 
-## Técnicas e Tecnologias usadas no projeto
-
- - ```Java 11```
- - ```Eclipse IDE```
- - ```Maven```
- - ```Spring Boot```
- - ```JUnit```
- - ```API Rest```
- - ```Orientação a Objetos```
- - ```Arquitetura Monolítica```
+**Índice**
+ - [Descrição](https://github.com/matheus-srego/challange_itau#descri%C3%A7%C3%A3o)
+ - [Problema](https://github.com/matheus-srego/challange_itau#problema)
+ - [Técnicas e Tecnologias usadas no projeto](https://github.com/matheus-srego/challange_itau#t%C3%A9cnicas-e-tecnologias-usadas-no-projeto)
+ - [Como Executar o projeto](https://github.com/matheus-srego/challange_itau#como-executar-o-projeto)
+    - [Ferramentas necessário na sua maquina](https://github.com/matheus-srego/challange_itau#ferramentas-necess%C3%A1rio-na-sua-maquina)
+    - [Comandos para executar o projeto](https://github.com/matheus-srego/challange_itau#comandos-para-executar-o-projeto)
+ - [Detahes da solução](https://github.com/matheus-srego/challange_itau#detahes-da-solu%C3%A7%C3%A3o)
+ - [Assumindo premissas](https://github.com/matheus-srego/challange_itau#assumindo-premissas)
 
 ## Descrição
 
@@ -55,6 +47,18 @@ Input: Uma senha (string).
 Output: Um boolean indicando se a senha é válida.
 
 Embora nossas aplicações sejam escritas em Kotlin e C# (.net core), você não precisa escrever sua solução usando elas. Use a linguagem de programação que considera ter mais conhecimento.
+
+## Técnicas e Tecnologias usadas no projeto
+
+ - ```Java 11```
+ - ```Eclipse IDE```
+ - ```Maven```
+ - ```Spring Boot```
+ - ```JUnit```
+ - ```RegEx```
+ - ```API Rest```
+ - ```Orientação a Objetos```
+ - ```Arquitetura Monolítica```
 
 ## Como Executar o projeto
 
