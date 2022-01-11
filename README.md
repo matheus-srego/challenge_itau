@@ -1,15 +1,15 @@
-# Back-end Challenge (iti - Itaú)
+# Back-end Challenge (iti // Itaú)
 
  - [Repositório do desafio: itidigital/backend-challenge](https://github.com/itidigital/backend-challenge)
 
 **Índice**
- - [Descrição](https://github.com/matheus-srego/challange_itau#descri%C3%A7%C3%A3o)
- - [Problema](https://github.com/matheus-srego/challange_itau#problema)
- - [Técnicas e Tecnologias usadas no projeto](https://github.com/matheus-srego/challange_itau#t%C3%A9cnicas-e-tecnologias-usadas-no-projeto)
- - [Como Executar o projeto](https://github.com/matheus-srego/challange_itau#como-executar-o-projeto)
-    - [Ferramentas necessário na sua maquina](https://github.com/matheus-srego/challange_itau#ferramentas-necess%C3%A1rio-na-sua-maquina)
-    - [Comandos para executar o projeto](https://github.com/matheus-srego/challange_itau#comandos-para-executar-o-projeto)
- - [Detahes da solução](https://github.com/matheus-srego/challange_itau#detahes-da-solu%C3%A7%C3%A3o)
+ - [Descrição](https://github.com/matheus-srego/challenge_itau#descri%C3%A7%C3%A3o)
+ - [Problema](https://github.com/matheus-srego/challenge_itau#problema)
+ - [Técnicas e Tecnologias usadas no projeto](https://github.com/matheus-srego/challenge_itau#t%C3%A9cnicas-e-tecnologias-usadas-no-projeto)
+ - [Como Executar o projeto](https://github.com/matheus-srego/challenge_itau#como-executar-o-projeto)
+    - [Ferramentas necessário na sua maquina](https://github.com/matheus-srego/challenge_itau#ferramentas-necess%C3%A1rio-na-sua-maquina)
+    - [Comandos para executar o projeto](https://github.com/matheus-srego/challenge_itau#comandos-para-executar-o-projeto)
+ - [Detahes da solução](https://github.com/matheus-srego/challenge_itau#detahes-da-solu%C3%A7%C3%A3o)
  - [Assumindo premissas](https://github.com/matheus-srego/challange_itau#assumindo-premissas)
 
 ## Descrição
