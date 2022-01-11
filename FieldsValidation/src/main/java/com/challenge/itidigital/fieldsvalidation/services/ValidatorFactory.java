@@ -23,14 +23,14 @@ public class ValidatorFactory {
 			case "hasNumberOfCharactersValid":
 				return new ValidatorNumberOfCharactersServiceImpl();
 				
-			case "hasDigit":
-				return new ValidatorDigitServiceImpl();
-				
 			case "hasLowercaseLetter":
 				return new ValidatorLowercaseLetterServiceImpl();
 				
 			case "hasUppercaseLetter":
 				return new ValidatorUppercaseLetterServiceImpl();
+
+			case "hasDigit":
+				return new ValidatorDigitServiceImpl();
 				
 			case "hasSpecialCharacter":
 				return new ValidatorSpecialCharacterServiceImpl();
@@ -40,12 +40,12 @@ public class ValidatorFactory {
 				
 			case "hasRepeatedUppercaseLetterInSequence":
 				return new ValidatorRepeatedUppercaseLetterInSequenceServiceImpl();
+
+			case "hasRepeatedDigitInSequence":
+				return new ValidatorRepeatedDigitInSequenceServiceImpl();
 				
 			case "hasRepeatedSpecialCharacterInSequence":
 				return new ValidatorRepeatedSpecialCharacterInSequenceServiceImpl();
-				
-			case "hasRepeatedDigitInSequence":
-				return new ValidatorRepeatedDigitInSequenceServiceImpl();
 				
 			case "hasRepeatedCharactersWithinTheSet":
 				return new ValidatorRepeatedCharactersWithinTheSetServiceImpl();
