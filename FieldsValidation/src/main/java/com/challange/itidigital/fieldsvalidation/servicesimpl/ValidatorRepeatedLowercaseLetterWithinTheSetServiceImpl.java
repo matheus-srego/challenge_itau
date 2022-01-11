@@ -11,7 +11,7 @@ public class ValidatorRepeatedLowercaseLetterWithinTheSetServiceImpl implements 
 	public Boolean validate( String field ) {
 		final Pattern pattern = Pattern.compile( "(?=.*[a-z]+$)" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean hasRepeatedLowercaseLetters = matcher.matches();
+		final Boolean hasRepeatedLowercaseLetters = matcher.find();
 		
 		return !hasRepeatedLowercaseLetters;
 	}

@@ -11,7 +11,7 @@ public class ValidatorRepeatedUppercaseLetterWithinTheSetServiecImpl implements 
 	public Boolean validate( String field ) {
 		final Pattern pattern = Pattern.compile( "(?=.*[A-Z]+$)" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean hasRepeatedUppercaseLetters = matcher.matches();
+		final Boolean hasRepeatedUppercaseLetters = matcher.find();
 		
 		return !hasRepeatedUppercaseLetters;
 	}

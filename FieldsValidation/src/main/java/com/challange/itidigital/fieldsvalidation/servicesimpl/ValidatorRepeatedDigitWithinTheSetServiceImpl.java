@@ -11,7 +11,7 @@ public class ValidatorRepeatedDigitWithinTheSetServiceImpl implements ValidatorS
 	public Boolean validate( String field ) {
 		final Pattern pattern = Pattern.compile( "(?=.*[0-9]+$)" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean hasRepeatedDigit = matcher.matches();
+		final Boolean hasRepeatedDigit = matcher.find();
 		
 		return !hasRepeatedDigit;
 	}
