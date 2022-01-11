@@ -1,12 +1,18 @@
 package com.challenge.itidigital.fieldsvalidation.servicesimpl;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.challenge.itidigital.fieldsvalidation.services.ValidatorService;
 
 public class ValidatorBlankSpaceServiceImpl implements ValidatorService {
 	
 	@Override
 	public Boolean validate( String field ) {
-		final Boolean noHasBlankSpace = !( field.indexOf( " " ) == 0 );
+		final Pattern pattern = Pattern.compile( "(\\s)" );
+		final Matcher matcher = pattern.matcher( field );
+		final Boolean noHasBlankSpace = !matcher.find();
+		
 		return noHasBlankSpace;
 	}
 	
