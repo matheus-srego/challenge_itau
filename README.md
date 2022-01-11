@@ -1,5 +1,7 @@
 # Back-end Challenge (iti - Itaú)
 
+ - [Repositório do desafio: itidigital/backend-challenge](https://github.com/itidigital/backend-challenge)
+
 **Índice**
  - [Descrição](https://github.com/matheus-srego/challange_itau#descri%C3%A7%C3%A3o)
  - [Problema](https://github.com/matheus-srego/challange_itau#problema)
