@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class ValidatorFieldService {
 	
-	@Value( "#{'${enabled_validators}'.split(',')}" )
-	private List<String> enabledValidators;
+	@Value( "#{'${enabled_validators_for_password}'.split(',')}" )
+	private List<String> enabledValidatorsForPassword;
 	
 	public Boolean isPasswordValid( String password ) {
 		
-		return this.enabledValidators.stream()
+		return this.enabledValidatorsForPassword.stream()
 									 .map( ValidatorFactory::getValidatorType )
 									 .map( validatorType -> validatorType.validate( password ) )
 									 .reduce( true, ( isFieldValid, isConditionValid ) -> isFieldValid && isConditionValid );

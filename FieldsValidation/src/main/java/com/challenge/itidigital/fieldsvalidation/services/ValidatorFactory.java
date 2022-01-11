@@ -4,13 +4,11 @@ import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorBlankSpac
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorDigitServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorLowercaseLetterServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorNumberOfCharactersServiceImpl;
+import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedCharactersWithinTheSetServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedDigitInSequenceServiceImpl;
-import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedDigitWithinTheSetServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedLowercaseLetterInSequenceServiceImpl;
-import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedLowercaseLetterWithinTheSetServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedSpecialCharacterInSequenceServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedUppercaseLetterInSequenceServiceImpl;
-import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedUppercaseLetterWithinTheSetServiecImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorSpecialCharacterServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorUppercaseLetterServiceImpl;
 
@@ -45,14 +43,8 @@ public class ValidatorFactory {
 			case "hasRepeatedDigitInSequence":
 				return new ValidatorRepeatedDigitInSequenceServiceImpl();
 				
-			case "hasRepeatedLowercaseLetterWithinTheSet":
-				return new ValidatorRepeatedLowercaseLetterWithinTheSetServiceImpl();
-				
-			case "hasRepeatedUppercaseLetterWithinTheSet":
-				return new ValidatorRepeatedUppercaseLetterWithinTheSetServiecImpl();
-				
-			case "hasRepeatedDigitWithinTheSet":
-				return new ValidatorRepeatedDigitWithinTheSetServiceImpl();
+			case "hasRepeatedCharactersWithinTheSet":
+				return new ValidatorRepeatedCharactersWithinTheSetServiceImpl();
 				
 			case "noExistBlankSpace":
 				return new ValidatorBlankSpaceServiceImpl();
