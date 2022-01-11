@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 import com.challange.itidigital.fieldsvalidation.services.ValidatorService;
 
-public class ValidatorRepeatedSpecialCharacterServiceImpl implements ValidatorService {
+public class ValidatorRepeatedSpecialCharacterInSequenceServiceImpl implements ValidatorService {
 	
 	@Override
 	public Boolean validate( String field ) {
@@ -13,7 +13,7 @@ public class ValidatorRepeatedSpecialCharacterServiceImpl implements ValidatorSe
 		final Matcher matcher = pattern.matcher( field );
 		final Boolean hasRepeatedSpecialCharacter = matcher.matches();
 		
-		return hasRepeatedSpecialCharacter;
+		return !hasRepeatedSpecialCharacter;
 	}
 	
 }

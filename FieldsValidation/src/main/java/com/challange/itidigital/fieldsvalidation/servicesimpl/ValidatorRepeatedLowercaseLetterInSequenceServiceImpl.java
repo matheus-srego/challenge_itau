@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 import com.challange.itidigital.fieldsvalidation.services.ValidatorService;
 
-public class ValidatorRepeatedLowercaseLetterServiceImpl implements ValidatorService {
+public class ValidatorRepeatedLowercaseLetterInSequenceServiceImpl implements ValidatorService {
 	
 	@Override
 	public Boolean validate( String field ) {
@@ -13,7 +13,7 @@ public class ValidatorRepeatedLowercaseLetterServiceImpl implements ValidatorSer
 		final Matcher matcher = pattern.matcher( field );
 		final Boolean hasRepeatedLowercaseLetters = matcher.matches();
 		
-		return hasRepeatedLowercaseLetters;
+		return !hasRepeatedLowercaseLetters;
 	}
 	
 }
