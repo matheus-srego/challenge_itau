@@ -2,6 +2,7 @@ package com.challenge.itidigital.fieldsvalidation.services;
 
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorBlankSpaceServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorDigitServiceImpl;
+import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorFieldEmptyServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorLowercaseLetterServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorNumberOfCharactersServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedCharactersWithinTheSetServiceImpl;
@@ -16,6 +17,9 @@ public class ValidatorFactory {
 	
 	public static ValidatorService getValidatorType( String name ) {
 		switch( name ) {
+			case "isFieldEmpty":
+				return new ValidatorFieldEmptyServiceImpl();
+				
 			case "hasNumberOfCharactersValid":
 				return new ValidatorNumberOfCharactersServiceImpl();
 				
