@@ -26,6 +26,7 @@
     - [Comandos para executar o projeto](https://github.com/matheus-srego/challenge_itau#comandos-para-executar-o-projeto)
  - [Detahes da solução](https://github.com/matheus-srego/challenge_itau#detahes-da-solu%C3%A7%C3%A3o)
  - [Assumindo premissas](https://github.com/matheus-srego/challange_itau#assumindo-premissas)
+ - [Licença](https://github.com/matheus-srego/challenge_itau#licen%C3%A7a)
 
 ## Stack
 
