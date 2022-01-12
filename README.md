@@ -1,5 +1,7 @@
 # Back-end Challenge (iti // Itaú)
 
+<img src="https://comoinvestirdinheiro.com/wp-content/uploads/2021/12/iti-itau.jpg"> 
+
 <div align="center">
 
 ![Java Version](https://img.shields.io/badge/Java-v11-important)
@@ -9,18 +11,32 @@
  
 </div>
 
+<div align="center">
 
- - [Repositório do desafio: itidigital/backend-challenge](https://github.com/itidigital/backend-challenge)
+**Repositório do desafio:** [itidigital/backend-challenge](https://github.com/itidigital/backend-challenge)
 
-**Índice**
+</div>
+
+## Índice
+ - [Stack](https://github.com/matheus-srego/challenge_itau#stack)
  - [Descrição](https://github.com/matheus-srego/challenge_itau#descri%C3%A7%C3%A3o)
  - [Problema](https://github.com/matheus-srego/challenge_itau#problema)
- - [Técnicas e Tecnologias usadas no projeto](https://github.com/matheus-srego/challenge_itau#t%C3%A9cnicas-e-tecnologias-usadas-no-projeto)
  - [Como Executar o projeto](https://github.com/matheus-srego/challenge_itau#como-executar-o-projeto)
     - [Ferramentas necessário na sua maquina](https://github.com/matheus-srego/challenge_itau#ferramentas-necess%C3%A1rio-na-sua-maquina)
     - [Comandos para executar o projeto](https://github.com/matheus-srego/challenge_itau#comandos-para-executar-o-projeto)
  - [Detahes da solução](https://github.com/matheus-srego/challenge_itau#detahes-da-solu%C3%A7%C3%A3o)
  - [Assumindo premissas](https://github.com/matheus-srego/challange_itau#assumindo-premissas)
+
+## Stack
+
+ - ```Java 11```
+ - ```Spring Boot```
+ - ```JUnit```
+ - ```Maven```
+ - ```RegEx```
+ - ```Eclipse IDE```
+ - ```Docker```
+ - ```Postman```
 
 ## Descrição
 
@@ -53,8 +69,8 @@ isValid("AbTp9!fok") // true
 
 Construa uma aplicação que exponha uma api web que valide se uma senha é válida.
 
-Input: Uma senha (string).  
-Output: Um boolean indicando se a senha é válida.
+**Input:** Uma senha (string).  
+**Output:** Um boolean indicando se a senha é válida.
 
 Embora nossas aplicações sejam escritas em Kotlin e C# (.net core), você não precisa escrever sua solução usando elas. Use a linguagem de programação que considera ter mais conhecimento.
 
@@ -106,3 +122,6 @@ Decidi criar um projeto usando a arquitetura monolítica em que todas as valida�
 
 ## Assumindo premissas
 Assumi a premissa de que o projeto poderia receber, futuramente, outros tipos de campos (como e-mail, CPF, CNPJ, nome..) e que a arquitetura e  código deveriam permitir que as validações do campo 'senha' fossem reutilizadas e personalizadas para cada campo que viesse a ser necessário validar. Desta forma utilizei interface, factory e transformei cada validação solicitada em um método único a fim de que a reutilização de código fosse possível.
+
+## Licença
+Este repositório usa o [MIT Licensed](https://github.com/matheus-srego/challenge_itau/blob/main/LICENSE).
