@@ -1,5 +1,15 @@
 # Back-end Challenge (iti // Itaú)
 
+<div align="center">
+
+![Java Version](https://img.shields.io/badge/Java-v11-important)
+![Spring Boot Version](https://img.shields.io/badge/Spring%20Boot-v2.6.2-green)
+![Maven Version](https://img.shields.io/badge/maven-v3.8.4-brightgreen)
+![Docker Version](https://img.shields.io/badge/Docker-v20.10.11-blue)
+ 
+</div>
+
+
  - [Repositório do desafio: itidigital/backend-challenge](https://github.com/itidigital/backend-challenge)
 
 **Índice**
@@ -47,20 +57,6 @@ Input: Uma senha (string).
 Output: Um boolean indicando se a senha é válida.
 
 Embora nossas aplicações sejam escritas em Kotlin e C# (.net core), você não precisa escrever sua solução usando elas. Use a linguagem de programação que considera ter mais conhecimento.
-
-## Técnicas, softwares e tecnologias usadas no projeto
-
- - ```Java 11```
- - ```Eclipse IDE```
- - ```Docker```
- - ```Postman```
- - ```Maven```
- - ```Spring Boot```
- - ```JUnit```
- - ```RegEx```
- - ```API Rest```
- - ```Orientação a Objetos```
- - ```Arquitetura Monolítica```
 
 ## Como Executar o projeto
 
