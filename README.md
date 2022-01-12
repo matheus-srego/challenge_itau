@@ -81,7 +81,7 @@ Embora nossas aplicações sejam escritas em Kotlin e C# (.net core), você não
 
 Antes de executar o projeto, é necessário ter as seguintes ferramentas instaladas em sua máquina:
  - [Git](https://git-scm.com/downloads)
- - [Java SDK v-11.0.12](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)
+ - [Java SDK v11.0.12](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)
  - [Apache Maven](https://maven.apache.org/download.cgi)
  - [Docker Desktop](https://www.docker.com/products/docker-desktop)
  - [Postman](https://www.postman.com/downloads/)
