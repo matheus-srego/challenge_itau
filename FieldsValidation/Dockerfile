@@ -1,12 +1,21 @@
-FROM openjdk:11
+FROM maven:3.8.4-openjdk-11 AS build
+
+WORKDIR /app
+COPY pom.xml .
+
+RUN mvn dependency:go-offline -B
+
+COPY src ./src
+
+RUN mvn clean package -DskipTests
+
+FROM openjdk:11-oracle
 
 EXPOSE 8080
+EXPOSE 5005
 
-ADD /target/*.jar /server/FieldsValidation.jar
+WORKDIR /app
 
-WORKDIR /server
+COPY --from=build /app/target/*.jar /app/FieldsValidation.jar
 
-ENTRYPOINT ["java","-jar","FieldsValidation.jar"]
-
-# Para depurar é só remover o comentário do ENTRYPOINT abaixo e comentar o ENTRYPOINT de cima..
-#ENTRYPOINT ["java","-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8081","-jar","FieldsValidation.jar"]
+ENTRYPOINT ["java","-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8081","-jar","/app/FieldsValidation.jar"]
