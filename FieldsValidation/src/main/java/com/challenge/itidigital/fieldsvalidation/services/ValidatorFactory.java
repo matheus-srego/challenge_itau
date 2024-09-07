@@ -12,6 +12,7 @@ import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedS
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorRepeatedUppercaseLetterInSequenceServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorSpecialCharacterServiceImpl;
 import com.challenge.itidigital.fieldsvalidation.servicesimpl.ValidatorUppercaseLetterServiceImpl;
+import com.challenge.itidigital.fieldsvalidation.utils.CONSTANTS;
 
 public class ValidatorFactory {
 	
@@ -54,8 +55,7 @@ public class ValidatorFactory {
 				return new ValidatorBlankSpaceServiceImpl();
 				
 			default: 
-				final String messageError = new String( "Não foi possível validar o campo com o método solicitado. Método não encontrado: " + name );
-				throw new IllegalArgumentException( messageError );
+				throw new IllegalArgumentException( CONSTANTS.METHOD_NOT_EXIST + name );
 		}
 	}
 
