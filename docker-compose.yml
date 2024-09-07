@@ -1,0 +1,15 @@
+services:
+  api:
+    build:
+      context: ./FieldsValidation
+      dockerfile: Dockerfile
+    container_name: fields_validation_api
+    environment:
+      DEBUG: "false"
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    volumes:
+      - ./FieldsValidation/target:/app/target
+    command: >
+      sh -c "java $${DEBUG:+-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005} -jar /app/FieldsValidation.jar"
