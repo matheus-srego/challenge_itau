@@ -50,6 +50,68 @@
  - ```Docker```
  - ```Postman```
 
+
+<details>
+    <summary><h2 id="arvore-do-projeto">Árvore do projeto</h2></summary>
+
+```bash
+.
+├── FieldsValidation
+│   ├── Dockerfile
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java
+│   │   │   │   └── com
+│   │   │   │       └── challenge
+│   │   │   │           └── itidigital
+│   │   │   │               └── fieldsvalidation
+│   │   │   │                   ├── FieldsValidationApplication.java
+│   │   │   │                   ├── controllers
+│   │   │   │                   │   └── ValidatorController.java
+│   │   │   │                   ├── services
+│   │   │   │                   │   ├── ValidatorFactory.java
+│   │   │   │                   │   ├── ValidatorFieldService.java
+│   │   │   │                   │   ├── ValidatorService.java
+│   │   │   │                   │   └── servicesimpl
+│   │   │   │                   │       ├── ValidatorBlankSpaceServiceImpl.java
+│   │   │   │                   │       ├── ValidatorDigitServiceImpl.java
+│   │   │   │                   │       ├── ValidatorFieldEmptyServiceImpl.java
+│   │   │   │                   │       ├── ValidatorLowercaseLetterServiceImpl.java
+│   │   │   │                   │       ├── ValidatorNumberOfCharactersServiceImpl.java
+│   │   │   │                   │       ├── ValidatorRepeatedCharactersWithinTheSetServiceImpl.java
+│   │   │   │                   │       ├── ValidatorRepeatedDigitInSequenceServiceImpl.java
+│   │   │   │                   │       ├── ValidatorRepeatedLowercaseLetterInSequenceServiceImpl.java
+│   │   │   │                   │       ├── ValidatorRepeatedSpecialCharacterInSequenceServiceImpl.java
+│   │   │   │                   │       ├── ValidatorRepeatedUppercaseLetterInSequenceServiceImpl.java
+│   │   │   │                   │       ├── ValidatorSpecialCharacterServiceImpl.java
+│   │   │   │                   │       └── ValidatorUppercaseLetterServiceImpl.java
+│   │   │   │                   └── utils
+│   │   │   │                       └── CONSTANTS.java
+│   │   │   └── resources
+│   │   │       └── application.properties
+│   │   └── test
+│   │       └── java
+│   │           └── com
+│   │               └── challenge
+│   │                   └── itidigital
+│   │                       └── fieldsvalidation
+│   │                           ├── FieldsValidationApplicationTests.java
+│   │                           └── servicesimpl
+│   │                               └── ValidatorServiceTests.java
+│   └── target
+├── LICENSE
+├── README.md
+├── clean.sh
+├── docker-compose.yml
+└── postman
+    └── challenge_itau.postman_collection.json
+```
+</details>
+
+
 ## Descrição
 
 Considere uma senha sendo válida quando a mesma possuir as seguintes definições:
@@ -129,6 +191,21 @@ cd ~/challenge_itau/FieldsValidation/
     DEBUG=false docker-compose up -d --build
     ```
     *ou simplesmente executar o comando sem 'DEBUG=false'*
+
+
+## Execução dos testes unitários
+
+Os testes foram escritos para garantir a integridade da aplicação, tentando abranger da melhor forma possível a validação do das senhas e seus caracteres. Abaixo mostro como executá-los:
+
+**Executar todos os testes**
+```bash
+mvn test
+```
+
+**Executar testes específicos**
+```bash
+mvn -Dtest=NomeDoTeste test
+```
 
 ## Licença
 Este repositório é licenciado sob a [MIT Licensed](https://github.com/matheus-srego/challenge_itau/blob/main/LICENSE).
