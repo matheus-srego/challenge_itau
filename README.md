@@ -5,10 +5,16 @@
 <div align="center">
 
 ![Java Version](https://img.shields.io/badge/Java-v11-important)
-![Spring Boot Version](https://img.shields.io/badge/Spring%20Boot-v2.6.2-green)
-![Maven Version](https://img.shields.io/badge/maven-v3.8.4-brightgreen)
-![Docker Version](https://img.shields.io/badge/Docker-v20.10.11-blue)
+![Spring Boot](https://img.shields.io/badge/spring_boot-%236DB33F)
+![Maven](https://img.shields.io/badge/maven-%23C71A36)
  
+</div>
+
+<div align="center">
+
+![Docker](https://img.shields.io/badge/docker-%232496ED)
+![Docker Compose](https://img.shields.io/badge/docker--compose-%230055A4)
+
 </div>
 
 <div align="center">
@@ -17,25 +23,30 @@
 
 </div>
 
+<div align="center">
+
+[➜ Read me in English](https://github.com/matheus-srego/challenge_itau/blob/main/README.md)
+
+</div>
+
 ## Índice
- - [Stack](https://github.com/matheus-srego/challenge_itau#stack)
- - [Descrição](https://github.com/matheus-srego/challenge_itau#descri%C3%A7%C3%A3o)
- - [Problema](https://github.com/matheus-srego/challenge_itau#problema)
- - [Como Executar o projeto](https://github.com/matheus-srego/challenge_itau#como-executar-o-projeto)
-    - [Ferramentas necessário na sua maquina](https://github.com/matheus-srego/challenge_itau#ferramentas-necess%C3%A1rio-na-sua-maquina)
-    - [Comandos para executar o projeto](https://github.com/matheus-srego/challenge_itau#comandos-para-executar-o-projeto)
- - [Detahes da solução](https://github.com/matheus-srego/challenge_itau#detahes-da-solu%C3%A7%C3%A3o)
- - [Assumindo premissas](https://github.com/matheus-srego/challange_itau#assumindo-premissas)
- - [Licença](https://github.com/matheus-srego/challenge_itau#licen%C3%A7a)
+ - [Stack](#stack)
+ - [Descrição](#descrição)
+ - [Problema](#problema)
+ - [Detahes da solução](#detalhes-da-solução)
+ - [Assumindo premissas](#assumindo-premissas)
+ - [Como Executar o projeto](#como-executar-o-projeto)
+    - [Com Dockefile](#com-dockerfile)
+    - [Com Docker Compose](#com-docker-compose)
+ - [Licença](#licença)
 
 ## Stack
 
  - ```Java 11```
- - ```Spring Boot```
+ - ```Spring Boot 2.6.2```
+ - ```Maven 3.8.4```
  - ```JUnit```
- - ```Maven```
  - ```RegEx```
- - ```Eclipse IDE```
  - ```Docker```
  - ```Postman```
 
@@ -75,45 +86,6 @@ Construa uma aplicação que exponha uma api web que valide se uma senha é vál
 
 Embora nossas aplicações sejam escritas em Kotlin e C# (.net core), você não precisa escrever sua solução usando elas. Use a linguagem de programação que considera ter mais conhecimento.
 
-## Como Executar o projeto
-
-### **Ferramentas necessário na sua maquina**
-
-Antes de executar o projeto, é necessário ter as seguintes ferramentas instaladas em sua máquina:
- - [Git](https://git-scm.com/downloads)
- - [Java SDK v11.0.12](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)
- - [Apache Maven](https://maven.apache.org/download.cgi)
- - [Docker Desktop](https://www.docker.com/products/docker-desktop)
- - [Postman](https://www.postman.com/downloads/)
-
-### **Comandos para executar o projeto**
-
-**Passo 0:** Faça o clone do projeto:
-```bash
-git clone https://github.com/matheus-srego/challange_itau.git
-```
-
-**Passo 1:** Entre na pasta do projeto com o comando abaixo:
-```bash
-cd ~/challenge_itau/FieldsValidation/
-```
-
-**Passo 2:** Execute o comando 'mvn' no terminal:
-```bash
-mvn clean install
-```
-
-**Passo 3:** Execute o docker build a fim de gerar uma imagem:
-```bash
-docker build -f Dockerfile -t fields_validation .
-```
-> **_Observação:_** a tag 'fields_validation' pode ser trocado pela tag que desejar, contanto que respeite o padrãolowercase do Docker.
-
-**Passo 4:** Execute o comando abaixo para subir o container:
-```bash
-docker run -p 8080:8080 -t fields_validation
-```
-
 ## Detahes da solução
 A fim de desenvolver o desafio me vali das tecnologias Java, JUnit, SpringBoot, Maven e RegEx. Da forma como a Descrição e o Problema foram elucidados, tal como nesse ponto do texto:
 
@@ -124,5 +96,39 @@ Decidi criar um projeto usando a arquitetura monolítica em que todas as valida�
 ## Assumindo premissas
 Assumi a premissa de que o projeto poderia receber, futuramente, outros tipos de campos (como e-mail, CPF, CNPJ, nome..) e que a arquitetura e  código deveriam permitir que as validações do campo 'senha' fossem reutilizadas e personalizadas para cada campo que viesse a ser necessário validar. Desta forma utilizei interface, factory e transformei cada validação solicitada em um método único a fim de que a reutilização de código fosse possível.
 
+## Como executar o projeto
+
+**Passo 0:** Faça o clone do projeto
+```bash
+git clone https://github.com/matheus-srego/challange_itau.git
+```
+
+**Passo 1:** Entre na pasta do projeto com o comando abaixo
+```bash
+cd ~/challenge_itau/FieldsValidation/
+```
+### Com Dockefile
+ - Construir a imagem da aplicação
+    ```bash
+    docker build -f Dockerfile -t openjdk_11 .
+    ```
+
+- Executar o container da aplicação
+    ```bash
+    docker run -d --name fields_validation_api -p 8080:8080 -t openjdk_11
+    ```
+
+### Com Docker Compose
+ - Executar o Docker Compose no modo debug
+    ```bash
+    DEBUG=true docker-compose up -d --build
+    ```
+
+ - Executar o Dokcer Compose sem o modo debug
+    ```bash
+    DEBUG=false docker-compose up -d --build
+    ```
+    *ou simplesmente executar o comando sem 'DEBUG=false'*
+
 ## Licença
-Este repositório usa o [MIT Licensed](https://github.com/matheus-srego/challenge_itau/blob/main/LICENSE).
+Este repositório é licenciado sob a [MIT Licensed](https://github.com/matheus-srego/challenge_itau/blob/main/LICENSE).
