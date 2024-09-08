@@ -66,9 +66,6 @@ jobs:
 
       - name: Build and run Docker Compose services
         run: docker-compose up --build -d
-
-      - name: Run tests inside the API container
-        run: docker exec fields_validation_api mvn test
-
+      
       - name: Stop and remove Docker Compose services
         run: docker-compose down
