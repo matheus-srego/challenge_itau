@@ -95,8 +95,10 @@
 │   │   │   │                   │       ├── ValidatorRepeatedUppercaseLetterInSequenceServiceImpl.java
 │   │   │   │                   │       ├── ValidatorSpecialCharacterServiceImpl.java
 │   │   │   │                   │       └── ValidatorUppercaseLetterServiceImpl.java
-│   │   │   └── utils
-│   │   │       └── CONSTANTS.java
+│   │   │   │                   └── utils
+│   │   │   │                       └── CONSTANTS.java
+│   │   │   └── resources
+│   │   │       └── application.properties
 │   │   └── test
 │   │       └── java
 │   │           └── com
@@ -109,10 +111,14 @@
 │   └── target
 ├── LICENSE
 ├── README.md
-├── clean.sh
 ├── docker-compose.yml
-└── postman
-    └── challenge_itau.postman_collection.json
+└── tools
+    ├── postman
+    │   └── challenge_itau.postman_collection.json
+    ├── readme
+    │   └── README.pt-BR.md
+    └── scripts
+        └── clean.sh
 ```
 </details>
 
