@@ -1,3 +1,4 @@
+
 # Back-end Challenge (iti // Itaú)
 
 <img src="https://comoinvestirdinheiro.com/wp-content/uploads/2021/12/iti-itau.jpg"> 
@@ -25,26 +26,26 @@
 
 <div align="center">
 
-**Repositório do desafio:** [itidigital/backend-challenge](https://github.com/itidigital/backend-challenge)
+**Challenge repository:** [itidigital/backend-challenge](https://github.com/itidigital/backend-challenge)
 
 </div>
 
 <div align="center">
 
-[➜ Read me in English](https://github.com/matheus-srego/challenge_itau/blob/main/README.md)
+[➜ Leia-me em Português](https://github.com/matheus-srego/challenge_itau/blob/main/README.md)
 
 </div>
 
-## Índice
+## Table of Contents
  - [Stack](#stack)
- - [Descrição](#descrição)
- - [Problema](#problema)
- - [Detahes da solução](#detalhes-da-solução)
- - [Assumindo premissas](#assumindo-premissas)
- - [Como Executar o projeto](#como-executar-o-projeto)
-    - [Com Dockefile](#com-dockerfile)
-    - [Com Docker Compose](#com-docker-compose)
- - [Licença](#licença)
+ - [Description](#description)
+ - [Problem](#problem)
+ - [Solution Details](#solution-details)
+ - [Assuming Premises](#assuming-premises)
+ - [How to Run the Project](#how-to-run-the-project)
+    - [Using Dockerfile](#using-dockerfile)
+    - [Using Docker Compose](#using-docker-compose)
+ - [License](#license)
 
 ## Stack
 
@@ -58,7 +59,7 @@
 
 
 <details>
-    <summary><h2 id="arvore-do-projeto">Árvore do projeto</h2></summary>
+    <summary><h2 id="project-tree">Project Tree</h2></summary>
 
 ```bash
 .
@@ -94,10 +95,8 @@
 │   │   │   │                   │       ├── ValidatorRepeatedUppercaseLetterInSequenceServiceImpl.java
 │   │   │   │                   │       ├── ValidatorSpecialCharacterServiceImpl.java
 │   │   │   │                   │       └── ValidatorUppercaseLetterServiceImpl.java
-│   │   │   │                   └── utils
-│   │   │   │                       └── CONSTANTS.java
-│   │   │   └── resources
-│   │   │       └── application.properties
+│   │   │   └── utils
+│   │   │       └── CONSTANTS.java
 │   │   └── test
 │   │       └── java
 │   │           └── com
@@ -117,20 +116,19 @@
 ```
 </details>
 
+## Description
 
-## Descrição
+Consider a password valid if it meets the following criteria:
 
-Considere uma senha sendo válida quando a mesma possuir as seguintes definições:
+- Nine or more characters
+- At least 1 digit
+- At least 1 lowercase letter
+- At least 1 uppercase letter
+- At least 1 special character
+  - Consider the following characters as special: !@#$%^&*()-+
+- No repeated characters within the set
 
-- Nove ou mais caracteres
-- Ao menos 1 dígito
-- Ao menos 1 letra minúscula
-- Ao menos 1 letra maiúscula
-- Ao menos 1 caractere especial
-  - Considere como especial os seguintes caracteres: !@#$%^&*()-+
-- Não possuir caracteres repetidos dentro do conjunto
-
-Exemplo:  
+Example:
 
 ```java
 isValid("") // false  
@@ -143,75 +141,75 @@ isValid("AbTp9 fok") // false
 isValid("AbTp9!fok") // true
 ```
 
-> **_Nota:_**  Espaços em branco não devem ser considerados como caracteres válidos.
+> **_Note:_**  White spaces should not be considered as valid characters.
 
-## Problema
+## Problem
 
-Construa uma aplicação que exponha uma api web que valide se uma senha é válida.
+Build an application that exposes a web API to validate if a password is valid.
 
-**Input:** Uma senha (string).  
-**Output:** Um boolean indicando se a senha é válida.
+**Input:** A password (string).  
+**Output:** A boolean indicating whether the password is valid.
 
-Embora nossas aplicações sejam escritas em Kotlin e C# (.net core), você não precisa escrever sua solução usando elas. Use a linguagem de programação que considera ter mais conhecimento.
+Although our applications are written in Kotlin and C# (.net core), you don't need to use these languages. Use the programming language you are most comfortable with.
 
-## Detahes da solução
-A fim de desenvolver o desafio me vali das tecnologias Java, JUnit, SpringBoot, Maven e RegEx. Da forma como a Descrição e o Problema foram elucidados, tal como nesse ponto do texto:
+## Solution Details
+To solve the challenge, I used technologies like Java, JUnit, SpringBoot, Maven, and RegEx. Based on how the **Description** and **Problem** were outlined, particularly the part:
 
- > "Construa uma aplicação que exponha uma api web que valide se uma senha é válida."
+ > "Build an application that exposes a web API to validate if a password is valid."
 
-Decidi criar um projeto usando a arquitetura monolítica em que todas as validações podem ser reutilizadas validando o que foi solicitado e reutilizando as validações criadas pode ser adaptado para outros tipos de campos de maneira coesa e sem quebrar sua arquitetura. A arquitetura do projeto permite a criação de novas classes e métodos de validação apenas realizando as chamadas dos métodos na classe factory que forem necessárias para um dado campo, assim podendo reutilizar metodos da própria validação de senha.
+I decided to create a project using a monolithic architecture where all validations can be reused, validating the requested fields and being adaptable for other types of fields in a cohesive manner without breaking the architecture. The project structure allows the creation of new classes and validation methods by simply calling the necessary methods from the factory class, enabling the reuse of the password validation logic.
 
-## Assumindo premissas
-Assumi a premissa de que o projeto poderia receber, futuramente, outros tipos de campos (como e-mail, CPF, CNPJ, nome..) e que a arquitetura e  código deveriam permitir que as validações do campo 'senha' fossem reutilizadas e personalizadas para cada campo que viesse a ser necessário validar. Desta forma utilizei interface, factory e transformei cada validação solicitada em um método único a fim de que a reutilização de código fosse possível.
+## Assuming Premises
+I assumed that the project could, in the future, receive other types of fields (such as email, CPF, CNPJ, name...) and that the architecture and code should allow password field validations to be reused and customized for each field that might need validation. Thus, I used interfaces, a factory pattern, and transformed each requested validation into a single method so that code reuse is possible.
 
-## Como executar o projeto
+## How to Run the Project
 
-**Passo 0:** Faça o clone do projeto
+**Step 0:** Clone the repository
 ```bash
 git clone https://github.com/matheus-srego/challange_itau.git
 ```
 
-**Passo 1:** Entre na pasta do projeto com o comando abaixo
+**Step 1:** Navigate to the project folder with the command below
 ```bash
 cd ~/challenge_itau/FieldsValidation/
 ```
-### Com Dockefile
- - Construir a imagem da aplicação
+### Using Dockerfile
+ - Build the application image
     ```bash
     docker build -f Dockerfile -t openjdk_11 .
     ```
 
-- Executar o container da aplicação
+- Run the application container
     ```bash
     docker run -d --name fields_validation_api -p 8080:8080 -t openjdk_11
     ```
 
-### Com Docker Compose
- - Executar o Docker Compose no modo debug
+### Using Docker Compose
+ - Run Docker Compose in debug mode
     ```bash
     DEBUG=true docker-compose up -d --build
     ```
 
- - Executar o Dokcer Compose sem o modo debug
+ - Run Docker Compose without debug mode
     ```bash
     DEBUG=false docker-compose up -d --build
     ```
-    *ou simplesmente executar o comando sem 'DEBUG=false'*
+    *or simply run the command without 'DEBUG=false'*
 
 
-## Execução dos testes unitários
+## Running Unit Tests
 
-Os testes foram escritos para garantir a integridade da aplicação, tentando abranger da melhor forma possível a validação do das senhas e seus caracteres. Abaixo mostro como executá-los:
+The tests were written to ensure the integrity of the application, trying to cover password validation and its characters as thoroughly as possible. Below is how to run them:
 
-**Executar todos os testes**
+**Run all tests**
 ```bash
 mvn test
 ```
 
-**Executar testes específicos**
+**Run specific tests**
 ```bash
-mvn -Dtest=NomeDoTeste test
+mvn -Dtest=TestName test
 ```
 
-## Licença
-Este repositório é licenciado sob a [MIT Licensed](https://github.com/matheus-srego/challenge_itau/blob/main/LICENSE).
+## License
+This repository is licensed under [MIT Licensed](https://github.com/matheus-srego/challenge_itau/blob/main/LICENSE).

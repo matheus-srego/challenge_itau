@@ -19,6 +19,12 @@
 
 <div align="center">
 
+[![CI for Fields Validation API to do build with Maven, Dockerfile Java and Docker Compose](https://github.com/matheus-srego/challenge_itau/actions/workflows/ci.yaml/badge.svg)](https://github.com/matheus-srego/challenge_itau/actions/workflows/ci.yaml)
+
+</div>
+
+<div align="center">
+
 **Repositório do desafio:** [itidigital/backend-challenge](https://github.com/itidigital/backend-challenge)
 
 </div>
