@@ -9,11 +9,10 @@ public class ValidatorRepeatedDigitInSequenceServiceImpl implements ValidatorSer
 	
 	@Override
 	public Boolean validate( String field ) {
-		final Pattern pattern = Pattern.compile( "([0-9])(\\1){1,}" );
+		final Pattern pattern = Pattern.compile("([0-9])(\\1)+" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean hasRepeatedDigit = matcher.find();
 		
-		return !hasRepeatedDigit;
+		return !matcher.find();
 	}
 	
 }

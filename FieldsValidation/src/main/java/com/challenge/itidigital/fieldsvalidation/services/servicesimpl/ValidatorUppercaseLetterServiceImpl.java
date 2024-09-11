@@ -11,9 +11,8 @@ public class ValidatorUppercaseLetterServiceImpl implements ValidatorService {
 	public Boolean validate( String field ) {
 		final Pattern pattern = Pattern.compile( "([A-Z])" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean hasUppercaseLetter = matcher.find();
 		
-		return hasUppercaseLetter;
+		return matcher.find();
 	}
 	
 }

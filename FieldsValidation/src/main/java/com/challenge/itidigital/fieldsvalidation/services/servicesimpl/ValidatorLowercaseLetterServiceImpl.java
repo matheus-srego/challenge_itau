@@ -11,9 +11,8 @@ public class ValidatorLowercaseLetterServiceImpl implements ValidatorService {
 	public Boolean validate( String field ) {
 		final Pattern pattern = Pattern.compile( "([a-z])" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean hasLowercaseLetter = matcher.find();
 		
-		return hasLowercaseLetter;
+		return matcher.find();
 	}
 	
 }

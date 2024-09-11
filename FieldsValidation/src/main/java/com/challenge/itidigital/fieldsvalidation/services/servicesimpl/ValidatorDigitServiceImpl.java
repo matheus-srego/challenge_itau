@@ -11,9 +11,8 @@ public class ValidatorDigitServiceImpl implements ValidatorService {
 	public Boolean validate( String field ) {
 		final Pattern pattern = Pattern.compile( "([0-9])" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean hasDigit = matcher.find();
 		
-		return hasDigit;
+		return matcher.find();
 	}
 	
 }

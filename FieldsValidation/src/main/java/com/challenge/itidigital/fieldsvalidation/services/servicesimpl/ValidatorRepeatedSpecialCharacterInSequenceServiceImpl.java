@@ -9,11 +9,10 @@ public class ValidatorRepeatedSpecialCharacterInSequenceServiceImpl implements V
 	
 	@Override
 	public Boolean validate( String field ) {
-		final Pattern pattern = Pattern.compile( "([!@#$%^&*()-+])(\\1){1,}" );
+		final Pattern pattern = Pattern.compile("([!@#$%^&*()-+])(\\1)+" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean hasRepeatedSpecialCharacter = matcher.find();
 		
-		return !hasRepeatedSpecialCharacter;
+		return !matcher.find();
 	}
 	
 }

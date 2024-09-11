@@ -6,9 +6,7 @@ public class ValidatorRepeatedCharactersWithinTheSetServiceImpl implements Valid
 	
 	@Override
 	public Boolean validate( String field ) {
-		final CharSequence fieldCheckSequence = field;
-		final Boolean hasRepeatedCharacter = fieldCheckSequence.length() != fieldCheckSequence.chars().distinct().count();
-		
+        final boolean hasRepeatedCharacter = ( ( CharSequence ) field ).length() != ( ( CharSequence ) field ).chars().distinct().count();
 		return !hasRepeatedCharacter;
 	}
 	

@@ -11,9 +11,8 @@ public class ValidatorBlankSpaceServiceImpl implements ValidatorService {
 	public Boolean validate( String field ) {
 		final Pattern pattern = Pattern.compile( "(\\s)" );
 		final Matcher matcher = pattern.matcher( field );
-		final Boolean noHasBlankSpace = !matcher.find();
 		
-		return noHasBlankSpace;
+		return !matcher.find();
 	}
 	
 }
