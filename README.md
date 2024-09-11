@@ -1,4 +1,3 @@
-
 # Back-end Challenge (iti // Itaú)
 
 <img src="https://comoinvestirdinheiro.com/wp-content/uploads/2021/12/iti-itau.jpg"> 
@@ -219,3 +218,9 @@ mvn -Dtest=TestName test
 
 ## License
 This repository is licensed under [MIT Licensed](https://github.com/matheus-srego/challenge_itau/blob/main/LICENSE).
+
+---
+
+### Acknowledgment
+
+I used ChatGPT to assist me in improving the translation of this README to English.
