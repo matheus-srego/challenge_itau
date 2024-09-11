@@ -31,7 +31,7 @@
 
 <div align="center">
 
-[➜ Leia-me em Português](https://github.com/matheus-srego/challenge_itau/blob/main/README.md)
+[➜ Leia-me em Português](tools/readme/README.pt-BR.md)
 
 </div>
 
