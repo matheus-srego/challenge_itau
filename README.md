@@ -1,6 +1,6 @@
 # Back-end Challenge (iti // Itaú)
 
-<img src="https://comoinvestirdinheiro.com/wp-content/uploads/2021/12/iti-itau.jpg"> 
+<img src="https://seucreditodigital.com.br/wp-content/uploads/2019/07/iti-itau.jpg"> 
 
 <div align="center">
 
